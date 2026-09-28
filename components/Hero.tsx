@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import profilePic from "@/public/profile.png";
+import profilePic from "@/public/profile.webp";
 
 export default function Hero() {
     return (
@@ -68,13 +68,20 @@ export default function Hero() {
                 View Projects →
             </Link>
 
-            <Link
-                href="/resume.pdf"
-                target="_blank"
-                className="px-7 py-3 border border-blue-600 text-blue-600 dark:text-blue-400 font-semibold hover:bg-blue-600 hover:text-white transition duration-300"
-            >
-                Download Resume
-            </Link>
+          <Link
+  href="https://www.linkedin.com/in/sadiasaad1010/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-7 py-3 border border-gray-300 text-gray-700 dark:text-gray-300 font-semibold hover:bg-blue-600 hover:text-white transition duration-300"
+>
+  LinkedIn
+</Link>
+<Link
+  href="mailto:sadiasaad1311@gmail.com"
+  className="px-7 py-3 border border-blue-600 text-blue-600 dark:text-blue-400 font-semibold hover:bg-blue-600 hover:text-white transition duration-300"
+>
+  Email Me
+</Link>
 
         </div>
 
