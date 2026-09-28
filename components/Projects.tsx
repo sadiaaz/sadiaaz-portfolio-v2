@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 
 const projects = [
@@ -17,6 +18,7 @@ const projects = [
     liveUrl: "https://chillerfleetwebsitee.vercel.app/",
     githubUrl: "#",
   },
+
   {
     title: "Digital Tech (DT)",
     category: "Digital Solutions",
@@ -34,6 +36,7 @@ const projects = [
     liveUrl: "http://digitaltechdt.com/",
     githubUrl: "YOUR_DIGITAL_TECH_GITHUB_URL",
   },
+
   {
     title: "CBLA Website",
     category: "Web Application",
@@ -50,51 +53,53 @@ const projects = [
     liveUrl: "https://cbla.com.pk/",
     githubUrl: "YOUR_CBLA_GITHUB_URL",
   },
+
   {
-  title: "Gessu Daraz Organics",
-  category: "Student Project",
-  description:
-    "A responsive product website designed for Gessu Daraz Organics, featuring product information, benefits, ingredients, usage guidance, gallery content, and a dedicated order section.",
-  role: "Frontend Developer",
-  technologies: [
-    "HTML",
-    "CSS",
-    "Responsive Design",
-  ],
-  liveUrl: "https://gessusherbaloil.vercel.app/",
-  githubUrl: "https://github.com/sadiaaz/gessusherbaloil",
-},
-{
-  title: "TSELA — The Spoken English Language Academy",
-  category: "Education Platform",
-  description:
-    "Designed and developed a responsive frontend for an English language learning academy, including course sections, student login access, events, reviews, branch information, and mobile-friendly navigation.",
-  role: "Frontend Developer",
-  technologies: [
-    "HTML5",
-    "CSS3",
-    "Bootstrap 5",
-    "JavaScript",
-    "Owl Carousel",
-    "AOS",
-    "Responsive Design",
-  ],
-  liveUrl: "https://tsela.com.pk/",
-  githubUrl: "#",
-},
+    title: "Gessu Daraz Organics",
+    category: "Student Project",
+    description:
+      "A responsive product website designed for Gessu Daraz Organics, featuring product information, benefits, ingredients, usage guidance, gallery content, and a dedicated order section.",
+    role: "Frontend Developer",
+    technologies: [
+      "HTML",
+      "CSS",
+      "Responsive Design",
+    ],
+    liveUrl: "https://gessusherbaloil.vercel.app/",
+    githubUrl: "https://github.com/sadiaaz/gessusherbaloil",
+  },
+
+  {
+    title: "TSELA — The Spoken English Language Academy",
+    category: "Education Platform",
+    description:
+      "Designed and developed a responsive frontend for an English language learning academy, including course sections, student login access, events, reviews, branch information, and mobile-friendly navigation.",
+    role: "Frontend Developer",
+    technologies: [
+      "HTML5",
+      "CSS3",
+      "Bootstrap 5",
+      "JavaScript",
+      "Owl Carousel",
+      "AOS",
+      "Responsive Design",
+    ],
+    liveUrl: "https://tsela.com.pk/",
+    githubUrl: "#",
+  },
 ];
 
 export default function Projects() {
   return (
     <section
       id="projects"
-      className="bg-slate-50/70 py-20 px-4 text-slate-900 sm:px-6 lg:px-8 dark:bg-slate-950 dark:text-slate-100"
+      className="bg-slate-50/70 px-4 py-20 text-slate-900 sm:px-6 lg:px-8 dark:bg-slate-950 dark:text-slate-100"
     >
       <div className="mx-auto max-w-6xl">
 
         {/* Section Heading */}
         <div className="mx-auto mb-12 max-w-2xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400">
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
             Selected Work
           </span>
 
@@ -126,20 +131,22 @@ export default function Projects() {
                 transition-all
                 duration-300
                 hover:-translate-y-1
+                hover:border-primary/25
                 hover:shadow-lg
                 dark:border-slate-800
                 dark:bg-slate-900
+                dark:hover:border-primary/30
               "
             >
-
-              {/* Clean Header */}
+              {/* Header */}
               <div className="relative px-5 pt-5">
 
-                {/* Small Accent */}
-                <div className="mb-4 h-1 w-10 rounded-full bg-blue-600 transition-all duration-300 group-hover:w-16" />
+                {/* Brand Accent */}
+                <div className="mb-4 h-1 w-10 rounded-full bg-primary transition-all duration-300 group-hover:w-16" />
 
+                {/* Category + Role */}
                 <div className="flex items-center justify-between gap-3">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-primary">
                     {project.category}
                   </span>
 
@@ -148,12 +155,13 @@ export default function Projects() {
                   </span>
                 </div>
 
+                {/* Project Title */}
                 <h3 className="mt-3 text-xl font-bold tracking-tight text-slate-900 dark:text-white">
                   {project.title}
                 </h3>
               </div>
 
-              {/* Project Content */}
+              {/* Content */}
               <div className="flex flex-1 flex-col px-5 pb-5 pt-4">
 
                 {/* Description */}
@@ -168,14 +176,14 @@ export default function Projects() {
                       key={tech}
                       className="
                         rounded-md
-                        bg-slate-100
+                        bg-primary/10
                         px-2.5
                         py-1
                         text-[10px]
                         font-medium
-                        text-slate-600
-                        dark:bg-slate-800
-                        dark:text-slate-300
+                        text-primary-dark
+                        dark:bg-primary/10
+                        dark:text-[#d9a5c0]
                       "
                     >
                       {tech}
@@ -186,6 +194,7 @@ export default function Projects() {
                 {/* Actions */}
                 <div className="mt-auto flex items-center gap-2 pt-6">
 
+                  {/* View Project */}
                   <Link
                     href={project.liveUrl}
                     target="_blank"
@@ -196,18 +205,19 @@ export default function Projects() {
                       items-center
                       justify-center
                       rounded-md
-                      bg-blue-600
+                      bg-primary
                       px-4
                       py-2.5
                       text-xs
                       font-semibold
                       text-white
-                      transition
+                      transition-colors
                       duration-200
-                      hover:bg-blue-700
+                      hover:bg-primary-dark
                     "
                   >
                     View Project
+
                     <svg
                       className="ml-1.5 h-3.5 w-3.5"
                       fill="none"
@@ -223,6 +233,7 @@ export default function Projects() {
                     </svg>
                   </Link>
 
+                  {/* GitHub */}
                   {project.githubUrl &&
                     project.githubUrl !== "#" &&
                     !project.githubUrl.startsWith("YOUR_") && (
@@ -238,14 +249,14 @@ export default function Projects() {
                           justify-center
                           rounded-md
                           border
-                          border-slate-200
-                          text-slate-600
-                          transition
-                          hover:border-slate-300
-                          hover:bg-slate-50
-                          dark:border-slate-700
-                          dark:text-slate-300
-                          dark:hover:bg-slate-800
+                          border-primary/20
+                          text-primary-dark
+                          transition-colors
+                          hover:border-primary
+                          hover:bg-primary/10
+                          dark:border-primary/20
+                          dark:text-[#d9a5c0]
+                          dark:hover:bg-primary/10
                         "
                         aria-label={`${project.title} GitHub repository`}
                       >
@@ -257,7 +268,7 @@ export default function Projects() {
                           <path
                             fillRule="evenodd"
                             clipRule="evenodd"
-                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608 0 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688.1.253-.446 1.272.098 2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
                           />
                         </svg>
                       </Link>
@@ -271,3 +282,4 @@ export default function Projects() {
     </section>
   );
 }
+

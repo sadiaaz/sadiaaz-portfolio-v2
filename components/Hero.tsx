@@ -3,141 +3,170 @@ import Link from "next/link";
 import profilePic from "@/public/profile.webp";
 
 export default function Hero() {
-    return (
-
-  
-<section className="flex flex-col-reverse md:flex-row items-center justify-between py-20 px-6 max-w-6xl mx-auto gap-12">
-
-    {/* Left Content */}
-    <div className="flex-1 space-y-6 text-center md:text-left">
+  return (
+    <section
+      id="home"
+      className="mx-auto flex max-w-6xl flex-col-reverse items-center justify-between gap-12 px-6 py-20 md:flex-row"
+    >
+      {/* Left Content */}
+      <div className="flex-1 space-y-6 text-center md:text-left">
 
         {/* Intro */}
         <div>
-            <p className="text-blue-600 font-semibold tracking-widest uppercase mb-3">
-                Full-Stack Software Engineer
-            </p>
+          <p className="mb-3 font-semibold uppercase tracking-widest text-primary">
+            Full-Stack Software Engineer
+          </p>
 
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-gray-900 dark:text-white">
-                Hi, I'm{" "}
-                <span className="text-blue-600">
-                    Sadia Saad
-                </span>
-            </h1>
+          <h1 className="text-4xl font-extrabold leading-tight text-gray-900 dark:text-white md:text-6xl">
+            Hi, I'm{" "}
+            <span className="text-primary">
+              Sadia Saad
+            </span>
+          </h1>
         </div>
-
 
         {/* Tech Stack */}
-        <h2 className="text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-300">
-            Laravel · Next.js · React · TypeScript
+        <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-300 md:text-2xl">
+          Laravel · Next.js · React · TypeScript
         </h2>
 
-
         {/* Description */}
-        <p className="text-lg leading-8 text-gray-600 dark:text-gray-400 max-w-2xl">
-            I build modern, scalable web applications and backend systems
-            that turn real-world requirements into reliable software.
-            My work focuses on clean architecture, secure APIs,
-            responsive interfaces, and maintainable solutions.
+        <p className="max-w-2xl text-lg leading-8 text-gray-600 dark:text-gray-400">
+          I build modern, scalable web applications and backend systems
+          that turn real-world requirements into reliable software.
+          My work focuses on clean architecture, secure APIs,
+          responsive interfaces, and maintainable solutions.
         </p>
 
-
         {/* Technology Tags */}
-        <div className="flex flex-wrap gap-2.5 justify-center md:justify-start">
-
-            {["Laravel", "Next.js", "React", "TypeScript", "MySQL"].map(
-                (technology) => (
-                    <span
-                        key={technology}
-                        className="px-3 py-1.5 border border-blue-200 dark:border-blue-900 text-blue-700 dark:text-blue-300 text-xs font-medium"
-                    >
-                        {technology}
-                    </span>
-                )
-            )}
-
+        <div className="flex flex-wrap justify-center gap-2.5 md:justify-start">
+          {["Laravel", "Next.js", "React", "TypeScript", "MySQL"].map(
+            (technology) => (
+              <span
+                key={technology}
+                className="
+                  border
+                  border-primary/25
+                  px-3
+                  py-1.5
+                  text-xs
+                  font-medium
+                  text-primary-dark
+                  dark:border-primary/30
+                  dark:text-[#d9a5c0]
+                "
+              >
+                {technology}
+              </span>
+            )
+          )}
         </div>
-
 
         {/* CTA Buttons */}
-        <div className="flex flex-wrap gap-4 justify-center md:justify-start pt-2">
+        <div className="flex flex-wrap justify-center gap-3 pt-2 md:justify-start">
 
-            <Link
-                href="#projects"
-                className="px-7 py-3 bg-blue-600 text-white font-semibold hover:bg-blue-700 transition duration-300 shadow-md"
-            >
-                View Projects →
-            </Link>
-
+          {/* Projects */}
           <Link
-  href="https://www.linkedin.com/in/sadiasaad1010/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="px-7 py-3 border border-gray-300 text-gray-700 dark:text-gray-300 font-semibold hover:bg-blue-600 hover:text-white transition duration-300"
->
-  LinkedIn
-</Link>
-<Link
-  href="mailto:sadiasaad1311@gmail.com"
-  className="px-7 py-3 border border-blue-600 text-blue-600 dark:text-blue-400 font-semibold hover:bg-blue-600 hover:text-white transition duration-300"
->
-  Email Me
-</Link>
+            href="#projects"
+            className="
+              bg-primary
+              px-7
+              py-3
+              font-semibold
+              text-white
+              shadow-sm
+              transition
+              duration-300
+              hover:bg-primary-dark
+            "
+          >
+            View Projects →
+          </Link>
 
+          {/* LinkedIn */}
+          <Link
+            href="https://www.linkedin.com/in/sadiasaad1010/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              border
+              border-primary-dark/25
+              px-7
+              py-3
+              font-semibold
+              text-primary-dark
+              transition
+              duration-300
+              hover:border-primary-dark
+              hover:bg-primary-dark
+              hover:text-white
+              dark:border-white/15
+              dark:text-gray-300
+              dark:hover:border-primary
+              dark:hover:bg-primary
+            "
+          >
+            LinkedIn
+          </Link>
+
+          {/* Email */}
+          <Link
+            href="mailto:sadiasaad1311@gmail.com"
+            className="
+              border
+              border-primary
+              px-7
+              py-3
+              font-semibold
+              text-primary
+              transition
+              duration-300
+              hover:bg-primary
+              hover:text-white
+            "
+          >
+            Email Me
+          </Link>
         </div>
-
 
         {/* Professional Identity */}
-        <div className="flex flex-wrap gap-x-5 gap-y-2 justify-center md:justify-start pt-3 text-sm text-gray-500 dark:text-gray-400">
+        <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 pt-3 text-sm text-gray-500 dark:text-gray-400 md:justify-start">
+          <span>Software Engineering Student</span>
 
-            <span>Software Engineering Student</span>
+          <span className="hidden sm:inline">•</span>
 
-            <span className="hidden sm:inline">•</span>
+          <span>Full-Stack Developer</span>
 
-            <span>Full-Stack Developer</span>
+          <span className="hidden sm:inline">•</span>
 
-            <span className="hidden sm:inline">•</span>
+          <span>Technical Lead</span>
+        </div>
+      </div>
 
-            <span>Technical Lead</span>
+      {/* Right Visual */}
+      <div className="flex flex-1 justify-center">
+        <div className="relative h-72 w-72 md:h-96 md:w-96">
+
+          {/* Soft Glow */}
+          <div className="absolute inset-4 rounded-full bg-primary/20 blur-3xl" />
+
+          {/* Accent Background */}
+          <div className="absolute inset-0 rotate-6 rounded-3xl bg-gradient-to-tr from-primary-dark to-primary opacity-80" />
+
+          {/* Main Image */}
+          <div className="relative h-full w-full -rotate-2 overflow-hidden rounded-3xl border border-white/20 bg-slate-900 shadow-2xl transition-transform duration-300 hover:rotate-0">
+            <Image
+              src={profilePic}
+              alt="Sadia Saad - Full-Stack Software Engineer"
+              fill
+              className="object-cover"
+              priority
+              placeholder="blur"
+            />
+          </div>
 
         </div>
-
-    </div>
-
-
-    {/* Right Visual */}
-    <div className="flex-1 flex justify-center">
-
-        <div className="relative w-72 h-72 md:w-96 md:h-96">
-
-            {/* Glow */}
-            <div className="absolute inset-0 rounded-full bg-blue-500 blur-3xl opacity-20"></div>
-
-
-            {/* Offset Accent */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-cyan-400 rounded-3xl rotate-6 opacity-80"></div>
-
-
-            {/* Main Image */}
-            <div className="relative w-full h-full rounded-3xl overflow-hidden border border-white/20 bg-slate-900 shadow-2xl -rotate-2 hover:rotate-0 transition-transform duration-300">
-
-                <Image
-                    src={profilePic}
-                    alt="Sadia Saad - Full-Stack Software Engineer"
-                    fill
-                    className="object-cover"
-                    priority
-                    placeholder="blur"
-                />
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-    );
+      </div>
+    </section>
+  );
 }

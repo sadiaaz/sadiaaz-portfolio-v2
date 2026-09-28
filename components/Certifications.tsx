@@ -31,7 +31,6 @@ const certifications = [
     credentialId: "C3D0WT4610V2",
     image: "/certificates/google-data-analytics.jfif",
   },
-  
   {
     title: "Laravel Certificate",
     issuer: "WebEducatorz",
@@ -39,7 +38,6 @@ const certifications = [
     skills: ["Laravel"],
     image: "/certificates/laravel.jfif",
   },
-  
 ];
 
 export default function Certifications() {
@@ -108,17 +106,17 @@ export default function Certifications() {
   return (
     <section
       id="certifications"
-      className="bg-[var(--background)] py-14 sm:py-16 lg:py-20"
+      className="bg-background py-14 sm:py-16 lg:py-20"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <div className="mx-auto mb-7 max-w-2xl text-center sm:mb-8">
-          <span className="text-xs font-medium text-blue-600 sm:text-sm dark:text-blue-400">
+          <span className="text-xs font-medium text-primary sm:text-sm">
             Credentials
           </span>
 
-          <h2 className="mt-1.5 text-2xl font-bold tracking-tight text-[var(--foreground)] sm:text-3xl">
+          <h2 className="mt-1.5 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
             Licenses & Certifications
           </h2>
 
@@ -137,13 +135,19 @@ export default function Certifications() {
             className="
               flex h-8 w-8 items-center justify-center
               rounded-md
-              border border-black/5
+              border border-primary/20
               bg-white
-              text-sm text-gray-600
-              transition hover:bg-blue-600 hover:text-white
-              dark:border-white/5
+              text-sm text-primary-dark
+              transition
+              hover:border-primary
+              hover:bg-primary
+              hover:text-white
+              dark:border-primary/20
               dark:bg-white/[0.03]
-              dark:text-gray-300
+              dark:text-primary-light
+              dark:hover:border-primary
+              dark:hover:bg-primary
+              dark:hover:text-white
             "
           >
             ←
@@ -156,13 +160,19 @@ export default function Certifications() {
             className="
               flex h-8 w-8 items-center justify-center
               rounded-md
-              border border-black/5
+              border border-primary/20
               bg-white
-              text-sm text-gray-600
-              transition hover:bg-blue-600 hover:text-white
-              dark:border-white/5
+              text-sm text-primary-dark
+              transition
+              hover:border-primary
+              hover:bg-primary
+              hover:text-white
+              dark:border-primary/20
               dark:bg-white/[0.03]
-              dark:text-gray-300
+              dark:text-primary-light
+              dark:hover:border-primary
+              dark:hover:bg-primary
+              dark:hover:text-white
             "
           >
             →
@@ -194,7 +204,7 @@ export default function Certifications() {
                 shrink-0
                 snap-start
                 overflow-hidden
-                rounded-lg
+                rounded-md
                 bg-white
                 shadow-sm
                 transition
@@ -234,7 +244,7 @@ export default function Certifications() {
 
                   {/* Hover */}
                   <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition group-hover:bg-black/10">
-                    <span className="rounded-md bg-white/95 px-3 py-1.5 text-[10px] font-semibold text-gray-900 opacity-0 shadow-sm transition group-hover:opacity-100">
+                    <span className="rounded-md bg-white/95 px-3 py-1.5 text-[10px] font-semibold text-primary-dark opacity-0 shadow-sm transition group-hover:opacity-100">
                       View ↗
                     </span>
                   </div>
@@ -243,14 +253,13 @@ export default function Certifications() {
 
               {/* Content */}
               <div className="p-3 sm:p-4">
-
                 <div className="flex items-start justify-between gap-2">
                   <div className="min-w-0">
                     <h3 className="line-clamp-2 text-xs font-semibold leading-4 text-gray-900 sm:text-sm dark:text-white">
                       {certificate.title}
                     </h3>
 
-                    <p className="mt-1 line-clamp-1 text-[10px] font-medium text-blue-600 sm:text-xs dark:text-blue-400">
+                    <p className="mt-1 line-clamp-1 text-[10px] font-medium text-primary sm:text-xs">
                       {certificate.issuer}
                     </p>
                   </div>
@@ -281,14 +290,14 @@ export default function Certifications() {
                         key={skill}
                         className="
                           rounded
-                          bg-gray-100
+                          bg-primary/10
                           px-1.5
                           py-0.5
                           text-[8px]
                           font-medium
-                          text-gray-600
-                          dark:bg-white/5
-                          dark:text-gray-400
+                          text-primary-dark
+                          dark:bg-primary/10
+                          dark:text-primary-light
                         "
                       >
                         {skill}
@@ -306,10 +315,9 @@ export default function Certifications() {
                     inline-flex
                     text-[10px]
                     font-semibold
-                    text-blue-600
+                    text-primary
                     transition
-                    hover:text-blue-700
-                    dark:text-blue-400
+                    hover:text-primary-dark
                   "
                 >
                   View Certificate →

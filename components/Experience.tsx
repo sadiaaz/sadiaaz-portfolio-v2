@@ -1,3 +1,4 @@
+
 const experiences = [
   {
     period: "2026 — Present",
@@ -9,15 +10,14 @@ const experiences = [
     responsibilities: [
       "Designed the overall frontend architecture and project structure",
       "Managed GitHub branches, merges, pull requests, and code reviews",
-      "Worked with Next.js, TypeScript, Tailwind CSS, Sanity CMS, and Vercel",
-      "Contributed to database and CMS schema planning",
+      "Worked with Next.js, TypeScript, Tailwind CSS, and Vercel",
+      "Contributed to database and content structure planning",
       "Coordinated development tasks across frontend and backend contributors",
     ],
     technologies: [
       "Next.js",
       "TypeScript",
       "Tailwind CSS",
-      "Sanity CMS",
       "GitHub",
       "Vercel",
     ],
@@ -73,21 +73,21 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="bg-[var(--background)] py-16 sm:py-20 lg:py-24"
+      className="bg-background px-4 py-16 text-gray-900 sm:px-6 sm:py-20 lg:px-8 lg:py-24 dark:text-white"
     >
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl">
 
         {/* Section Header */}
         <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-          <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary sm:text-sm">
             My Journey
           </span>
 
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-[var(--foreground)] sm:text-4xl">
+          <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
             Experience & Leadership
           </h2>
 
-          <p className="mt-3 text-sm leading-6 text-gray-600 dark:text-gray-400 sm:text-base">
+          <p className="mt-3 text-sm leading-6 text-gray-600 sm:text-base dark:text-gray-400">
             Practical experience building software, leading technical work,
             collaborating with teams, and solving real-world problems.
           </p>
@@ -95,8 +95,9 @@ export default function Experience() {
 
         {/* Timeline */}
         <div className="relative">
-          {/* Desktop Timeline Line */}
-          <div className="absolute left-[5px] top-2 hidden h-[calc(100%-8px)] w-px bg-gray-200 md:block dark:bg-white/10" />
+
+          {/* Timeline Line */}
+          <div className="absolute left-[5px] top-2 hidden h-[calc(100%-8px)] w-px bg-primary/20 md:block" />
 
           <div className="space-y-8 sm:space-y-10">
 
@@ -114,27 +115,31 @@ export default function Experience() {
                 </div>
 
                 {/* Timeline Dot */}
-                <div className="absolute left-0 top-1 hidden h-3 w-3 rounded-full bg-blue-600 md:block" />
+                <div className="absolute left-0 top-1 hidden h-3 w-3 rounded-full bg-primary md:block" />
 
                 {/* Experience Card */}
                 <div
                   className="
                     rounded-md
-                    border border-black/5
+                    border
+                    border-black/5
                     bg-white
                     p-5
                     shadow-sm
                     transition
                     duration-300
+                    hover:-translate-y-0.5
+                    hover:border-primary/20
                     hover:shadow-md
                     sm:p-6
                     dark:border-white/5
                     dark:bg-white/[0.025]
+                    dark:hover:border-primary/20
                   "
                 >
 
                   {/* Mobile Date */}
-                  <p className="mb-2 text-xs font-medium text-blue-600 sm:text-sm md:hidden dark:text-blue-400">
+                  <p className="mb-2 text-xs font-medium text-primary sm:text-sm md:hidden">
                     {experience.period}
                   </p>
 
@@ -145,7 +150,7 @@ export default function Experience() {
                         {experience.role}
                       </h3>
 
-                      <p className="mt-0.5 text-sm font-medium text-blue-600 dark:text-blue-400">
+                      <p className="mt-0.5 text-sm font-medium text-primary">
                         {experience.organization}
                       </p>
                     </div>
@@ -153,15 +158,15 @@ export default function Experience() {
                     <span
                       className="
                         w-fit
-                        rounded-full
-                        bg-gray-100
+                        rounded-md
+                        bg-primary/10
                         px-2.5
                         py-1
-                        text-[11px]
+                        text-[10px]
                         font-medium
-                        text-gray-600
-                        dark:bg-white/10
-                        dark:text-gray-300
+                        text-primary-dark
+                        dark:bg-primary/10
+                        dark:text-[#d9a5c0]
                       "
                     >
                       {experience.type}
@@ -185,7 +190,7 @@ export default function Experience() {
                           key={item}
                           className="flex items-start gap-2.5 text-sm leading-5 text-gray-600 dark:text-gray-400"
                         >
-                          <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-blue-600" />
+                          <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-primary" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -199,12 +204,12 @@ export default function Experience() {
                         key={technology}
                         className="
                           rounded-md
-                          bg-gray-100
+                          bg-primary/10
                           px-2.5
                           py-1
                           text-[11px]
                           font-medium
-                          text-gray-700
+                          text-primary-dark
                           dark:bg-white/5
                           dark:text-gray-300
                         "
@@ -223,3 +228,4 @@ export default function Experience() {
     </section>
   );
 }
+
